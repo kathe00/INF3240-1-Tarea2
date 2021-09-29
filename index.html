@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <title>Formulario Responsivo</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Hojas de estilos -->
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/estilos.css">
+        <link rel="stylesheet" href="css/validacion.css">
+        <!-- Bootstrap -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div id="container" class="container-fluid">
+            <h1>Formulario para el estudiante</h1>
+            <p id="instrucciones">Con el objetivo de conocer mejor algunos aspectos de los estudiantes, la Escuela de Ingeniería Informática le invita a contestar las siguientes preguntas:</p>
+            <p id="mensaje" hidden>Hemos recibido sus datos, pronto nos estaremos comunicando con usted.</p> 
+            <form class="needs-validation" name="formulario" id="formulario" novalidate>
+                <!-- Area de preguntas sobre información personal -->
+                <div class="row g-3" id="personal">
+                    <p>1) Información personal</p>
+
+                    <div class="col-md-6">
+                        <label for="nombre" class="form-label">Nombre Completo:</label>
+                        <input type="text" class="form-control" id="nombre" maxlength="20" placeholder="Ingrese su nombre" required/>
+                        <div class="valid-feedback">Bien.</div>
+                        <div class="invalid-feedback">El nombre es obligatorio.</div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label for="rut" class="form-label">RUT:</label>
+                        <input type="text" class="form-control" id="rut" maxlength="10" placeholder="1111111-1" required/>
+                        <div class="valid-feedback">Bien.</div>
+                        <div class="invalid-feedback" id="oblRut">El RUT es obligatorio.</div>
+                        <div class="invalid-feedback" id="invRut" hidden>El formato del RUT es inválido.</div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label for="email" class="form-label">Correo Electrónico:</label>
+                        <input type="email" class="form-control" id="email" maxlength="50" placeholder="ejemplo@mail.com" required/>
+                        <div class="valid-feedback">Bien.</div>
+                        <div class="invalid-feedback">El correo electrónico es obligatorio.</div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label for="telefono" class="form-label">Teléfono Móvil:</label>
+                        <input type="number" class="form-control" id="telefono" placeholder="987654321" required/>
+                        <div class="valid-feedback">Bien.</div>
+                        <div class="invalid-feedback" id="oblTelefono">El número de teléfono es obligatorio.</div>
+                        <div class="invalid-feedback" id="invTelefono" hidden>El formato del número de teléfono es inválido.</div>
+                    </div>
+                </div>
+
+                <!-- Area de preguntas sobre manejo en programación -->
+                <div id="programcación">
+                    <p>2) Manejo de lenguajes de programación</p>
+                    <label class="form-label">Seleccione uno o más lenguajes de programación que sean de su interés:</label>
+                    <div class="row align-items-center">
+                        <div class="col">
+                            <ul>
+                                <li>
+                                    <input class="form-check-input" type="checkbox" name="stackCheckBox" value="" id="checkLeng1">
+                                    <label class="form-check-label" for="checkLeng1">Python</label>
+                                </li>
+                                <li>
+                                    <input class="form-check-input" type="checkbox" name="stackCheckBox" value="" id="checkLeng2">
+                                    <label class="form-check-label" for="checkLeng2">TypeScript</label>
+                                </li>
+                                <li>
+                                    <input class="form-check-input" type="checkbox" name="stackCheckBox" value="" id="checkLeng3">
+                                    <label class="form-check-label" for="checkLeng3">C++</label>
+                                    <div class="invalid-feedback">Seleccione al menos una.</div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col">
+                            <ul>
+                                <li>
+                                    <input class="form-check-input" type="checkbox" name="stackCheckBox" value="" id="checkLeng4">
+                                    <label class="form-check-label" for="checkLeng4">C#</label>
+                                </li>
+                                <li>
+                                    <input class="form-check-input" type="checkbox" name="stackCheckBox" value="" id="checkLeng5">
+                                    <label class="form-check-label" for="checkLeng5">PHP</label>
+                                </li>
+                                <li>
+                                    <input class="form-check-input" type="checkbox" name="stackCheckBox" value="" id="checkLeng6">
+                                    <label class="form-check-label" for="checkLeng6">Ruby on Rails</label>
+                                </li>
+                            </ul>
+    
+                        </div>
+                        <div class="col">
+                            <ul>
+                                <li>
+                                    <input class="form-check-input" type="checkbox" name="stackCheckBox" value="" id="checkLeng7">
+                                    <label class="form-check-label" for="checkLeng7">Java</label>
+                                </li>
+                                <li>
+                                    <input class="form-check-input" type="checkbox" name="stackCheckBox" value="" id="checkLeng8">
+                                    <label class="form-check-label" for="checkLeng8">R</label>
+                                </li>
+                                <li>
+                                    <input class="form-check-input" type="checkbox" name="stackCheckBox" value="" id="checkLeng9">
+                                    <label class="form-check-label" for="checkLeng9">Groovy</label>
+                                </li>
+                            </ul>
+                        </div> 
+                        <div class="col">
+                            <ul>
+                                <li>
+                                    <input class="form-check-input" type="checkbox" name="stackCheckBox" value="" id="checkLeng10">
+                                    <label class="form-check-label" for="checkLeng10">Go</label>
+                                </li>
+                                <li>
+                                    <input class="form-check-input" type="checkbox" name="stackCheckBox" value="" id="checkLeng11">
+                                    <label class="form-check-label" for="checkLeng11">Swift</label>
+                                </li>
+                                <li>
+                                    <input class="form-check-input" type="checkbox" name="stackCheckBox" value="" id="checkLeng12">
+                                    <label class="form-check-label" for="checkLeng12">Kotlin</label>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <label class="form-label">¿Cuál es su nivel de experiencia en programación?</label>
+                    <div class="form-check">
+                        <ul>
+                            <li class="form-check">
+                                <input class="form-check-input" type="radio" name="stackRadio" id="rad1" required>
+                                <label class="form-check-label" for="radAlto">Alto</label>
+                            </li>
+                            <li class="form-check">
+                                <input class="form-check-input" type="radio" name="stackRadio" id="rad2" required>
+                                <label class="form-check-label" for="radMedio">Medio</label>
+                            </li>
+                            <li class="form-check">
+                                <input class="form-check-input" type="radio" name="stackRadio" id="rad3" required>
+                                <label class="form-check-label" for="radBajo">Bajo</label>
+                                <div class="invalid-feedback">Seleccione una de las opciones.</div>
+                            </li>
+                        </ul>
+                        
+                    </div>
+                    <label class="form-label">¿Cuál es su nivel de conocimiento sobre los siguientes lenguajes de programación?</label>
+                    <div class="form-check">
+                        <ul>
+                            <li>
+                                <label for="pythonRange" class="form-label">Python</label>
+                                <input type="range" class="form-range" id="pythonRange">
+                            </li>
+                            <li>
+                                <label for="cRange" class="form-label">C++</label>
+                                <input type="range" class="form-range" id="cRange">
+                            </li>
+                            <li>
+                                <label for="javaRange" class="form-label">Java</label>
+                                <input type="range" class="form-range" id="javaRange">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Area de preguntas sobre su experiencia estudiando -->
+                <div id="experiencia">
+                    <p>3) Experiencia personal</p>
+                    <label class="form-label">Seleccione cuál de los siguientes cursos le ha tomado mayor dificultad:</label>
+                    <div>
+                        <ul>
+                            <li>
+                                <input class="form-check-input" type="checkbox" name="stackCheckBox2" value="" id="checkAs1">
+                                <label class="form-check-label" for="checkAs1">Estructura de Datos</label>
+                            </li>
+                            <li>
+                                <input class="form-check-input" type="checkbox" name="stackCheckBox2" value="" id="checkAs2">
+                                <label class="form-check-label" for="checkAs2">Inteligencia Artificial</label>
+                            </li>
+                            <li>
+                                <input class="form-check-input" type="checkbox" name="stackCheckBox2" value="" id="checkAs3">
+                                <label class="form-check-label" for="checkAs3">Interacción Humano-Computador</label>
+                            </li>
+                            <li>
+                                <input class="form-check-input" type="checkbox" name="stackCheckBox2" value="" id="checkAs4">
+                                <label class="form-check-label" for="checkAs4">Sistemas Operativos</label>
+                            </li>
+                            <li>
+                                <input class="form-check-input" type="checkbox" name="stackCheckBox2" value="" id="checkAs5">
+                                <label class="form-check-label" for="checkAs5">Otro: </label>
+                                <input type="text" class="form-control" id="asignatura" maxlength="50" placeholder="Nombre de la asignatura" disabled/>
+                                <div class="invalid-feedback">Seleccione al menos una.</div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <label class="form-label">Queremos conocer su opinión acerca de la escuela: </label>
+                    <div>
+                        <textarea class="form-control" id="coments" maxlength="500" placeholder="Max 500 caracteres." required></textarea>
+                        <div class="valid-feedback">Bien.</div>
+                        <div class="invalid-feedback">Escriba de 1 a 500 caracteres.</div>
+                    </div>
+                </div>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-end" id="botones">
+                    <button class="btn btn-primary" type="submit" id="enviar">Enviar</button>
+                    <button class="btn btn-secondary" type="reset" id="cancelar">Cancelar</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Bootstrap -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+        <!-- JQuery -->
+        <script data-main="js/validacion" src="js/require-jquery.js"></script>
+    </body>
+</html>

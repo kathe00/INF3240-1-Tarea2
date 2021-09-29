@@ -1,0 +1,58 @@
+#container {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  max-width: 1000px;
+  border: 1px solid gainsboro;
+  background-color: #e9f6f8;
+  padding: 30px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+  text-align: center;
+}
+
+#container p {
+  margin-top: 20px;
+}
+
+form p {
+  font-weight: bold;
+  margin-left: 20px;
+}
+
+#personal p {
+  margin-bottom: 0px;
+}
+
+#personal div div input {
+  width: 100%;
+}
+
+#programacion div div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#experiencia div ul {
+  max-width: 500px;
+}
+
+#coments {
+  width: 100%;
+}
+
+#botones {
+  margin-top: 30px;
+}
+/*# sourceMappingURL=estilos.css.map */
